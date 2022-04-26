@@ -1,31 +1,38 @@
 import React from 'react';
-import Grid from '@mui/material/Grid';
+import { Grid, Switch } from '@mui/material';
 import {
-  NavLink,
+  Link,
   BrowserRouter as Router,
 } from "react-router-dom";
 
 export default function Navbar() {
+  const label = { inputProps: { 'aria-label': 'Dark Mode' } };
+
   return (
-    <Grid item xs={2} md={2} className="navbar">
+    <Grid item xs={2} md={2} className="navbar" onChange={()=>console.log("change theme")}>
+      
+      <Switch {...label} />
       <ul style={{ listStyleType: "none", padding: 0 }}>
         <li>
-          <NavLink to="/addresses">addresses</NavLink>
+          <Link to="/introduction">introduction</Link>
         </li>
         <li>
-          <NavLink to="/books">books</NavLink>
+          <Link to="/addresses">addresses</Link>
         </li>
         <li>
-          <NavLink to="/companies">companies</NavLink>
+          <Link to="/books">books</Link>
         </li>
         <li>
-          <NavLink to="/movies">movies</NavLink>
+          <Link to="/companies">companies</Link>
         </li>
         <li>
-          <NavLink to="/products">products</NavLink>
+          <Link to="/movies">movies</Link>
         </li>
         <li>
-          <NavLink to="/users">users</NavLink>
+          <Link to="/products">products</Link>
+        </li>
+        <li>
+          <Link to="/users">users</Link>
         </li>
       </ul>
     </Grid>

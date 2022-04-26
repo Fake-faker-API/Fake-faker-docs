@@ -7,7 +7,35 @@ const endpointDescription = {
       name: "total_rows",
       description: "Total number of rows that should be returned",
       example: "/addresses?total_rows=5",
-      exampleOutcome: "add json here",
+      exampleResponse: [ 
+        {
+          "id": 1,
+          "street_number": "3169",
+          "street_name": "Buckingham Drive",
+          "city": "Beach",
+          "state": "VA",
+          "zipcode": "44612",
+          "country": "US"
+        },
+        {
+          "id": 2,
+          "street_number": "9853",
+          "street_name": "2nd Avenue",
+          "city": "Pryor",
+          "state": "LA",
+          "zipcode": "74459",
+          "country": "US"
+        },
+        {
+          "id": 3,
+          "street_number": "383",
+          "street_name": "2nd Street",
+          "city": "Phenix",
+          "state": "SC",
+          "zipcode": "68881",
+          "country": "US"
+        }
+      ],
       notes: "Specified number can be between 1 and 1000",
     }],
   },
