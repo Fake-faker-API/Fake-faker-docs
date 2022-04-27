@@ -1,0 +1,157 @@
+body {
+  background-color: rgb(244, 247, 252);
+}
+.navbar {
+  position: fixed;
+  margin: 0;
+
+  padding: 2em;
+  top:0;
+  left:0;
+  width: 20%;
+}
+
+.main-content {
+  width:80%;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  // background-color: rgb(236, 240, 243);
+}
+.divider-endpoint-title, .divider-endpoint-subtitle {
+  display: block;
+  width: 80%;
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  border-width: 0.3px;
+  border-color:rgb(208, 207, 207)
+}
+.divider-endpoint-subtitle {
+  width: 65%;
+  border-width: 0.1px;
+  border-color:rgb(220, 219, 219)
+}
+
+ul:not(.introduction-endpoint-list) {
+  list-style: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  li {
+    position:relative;
+    padding:10px 0;
+    cursor:pointer;
+     &:before {
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      width: 22px;
+      height: 12px;
+      content: '';
+      transition: all 0.3s;
+      background-image: url("./assets/arrow.svg");
+        background-position: center;
+        background-size:cover;
+        transform: translateY(-50%);
+    }
+    &:hover {
+      &:before {
+        left:-25px;
+      }
+    }
+  }
+}
+
+.introduction-endpoint-list {
+  list-style: none;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.endpoint, .endpoint-param-name, .endpoint-request-path {
+  display: block;
+  background-color: rgb(221, 221, 221);
+  width:fit-content;
+  border-radius: 3px;
+  padding: 1px;
+  margin: 1em;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+.endpoint-title, .endpoint-param-title, .response-example-title, .endpoint-object-title, .endpoint-attributes-title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
+  font-weight: 500;
+  padding: 1em;
+}
+
+.endpoint-description, .endpoint-param-description, .endpoint-attribute-name, 
+.endpoint-attribute-type, .endpoint-attribute-description {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1em;
+  display:block;
+}
+
+.endpoint-param-title, .response-example-title, .response-example-title, .endpoint-object-title, .endpoint-attributes-title {
+  font-size: 1.5em;
+  display: block;
+  margin-top: 1.2em;
+
+}
+
+.endpoint-attribute-name, .endpoint-attribute-type  {
+  padding: 0.3em;
+  font-weight: 600;
+  color:rgb(28, 28, 28);
+  display:inline;
+}
+
+.endpoint-attribute-type {
+  font-weight: 400;
+  color:rgb(63, 63, 63);
+}
+
+.endpoint-attribute-description {
+  padding: 1em;
+}
+
+
+.endpoint-param-name {
+
+}
+
+.endpoint-param-description {
+
+}
+
+.endpoint-request-path {
+
+}
+
+.response-example-title {
+
+}
+
+.response-example-full-object {
+  color: rgb(33, 33, 33);
+  font-weight: 600;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  overflow: auto;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.response-example-string-value {
+  color: rgb(53, 114, 42);
+  font-weight: 600;
+}
+
+.response-example-number-value {
+  color: rgb(92, 96, 178);
+  font-weight: 600;
+}
