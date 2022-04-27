@@ -1,24 +1,24 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import "./App.css";
+import './App.scss';
 import {
-  BrowserRouter as Router,
-} from "react-router-dom";
+  BrowserRouter as Router
+} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 
-function App() {
+function App () {
   return (
     <Router>
     <Grid container>
       <Navbar />
-    <Grid item xs={10} md={10} className="main-content">
+    <Grid item xs={10} md={10} className='main-content'>
      <Main />
     </Grid>
   </Grid>
   </Router>
-  );
+  )
 }
 
-export default App;
+export default App
