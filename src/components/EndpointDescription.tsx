@@ -1,7 +1,6 @@
 import React, {
   FC,
-  useState,
-  useEffect
+  useState
 } from 'react';
 import AddressObject from '../typeDefs/AddressObject';
 import BookObject from '../typeDefs/BookObject';
@@ -44,16 +43,6 @@ const EndpointDescription: FC<Props> = ({
   object
 }) => {
   const [clipboardState, setClipboardState] = useState({ copied: false });
-
-  useEffect(
-    () => {
-      const timer1 = setTimeout(() => setClipboardState({ copied: false }), 2000);
-      return () => {
-        clearTimeout(timer1);
-        setClipboardState({ copied: true })
-      };
-    }, []
-  );
 
   return (
     <div>
@@ -106,6 +95,8 @@ const EndpointDescription: FC<Props> = ({
                 {clipboardState.copied
                   ? <>
                   <span className='clipboard-copied-msg'>Copied!</span>
+                  {/* //FIXME should display Copied! for some period of time and then clear */}
+                  {setClipboardState({ copied: false })}
                   </>
                   : ''}
               </div>
