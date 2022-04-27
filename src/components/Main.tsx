@@ -24,7 +24,7 @@ export default function Main () {
           </Route>
            <Route path='/movies' element={(() => <EndpointDescription {...endpointDescription.movies} />)()}>
           </Route>
-          <Route path='/users' element={(() => <EndpointDescription {...endpointDescription.addresses} />)()}>
+          <Route path='/users' element={(() => <EndpointDescription {...endpointDescription.users} />)()}>
           </Route>
           <Route path='/introduction' element={(() => <Introduction introductionText='Some text' />)()}>
 
