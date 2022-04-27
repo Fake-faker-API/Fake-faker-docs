@@ -71,7 +71,7 @@ a {
   color: black;
 }
 
-.endpoint, .endpoint-param-name, .endpoint-request-path {
+.endpoint, .endpoint-param-name, .endpoint-request-path, .endpoint-param-name-intro {
   display: block;
   background-color: rgb(221, 221, 221);
   width:fit-content;
@@ -79,7 +79,12 @@ a {
   padding: 1px;
   margin: 1em;
   font-family: 'Courier New', Courier, monospace;
+}
 
+.endpoint-param-name-intro {
+  display: inline-block;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 .endpoint-title, .endpoint-param-title, .response-example-title, .endpoint-object-title, .endpoint-attributes-title {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -92,21 +97,19 @@ a {
 .endpoint-attribute-type, .endpoint-attribute-description {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1em;
-  display:block;
+  display: block;
 }
 
 .endpoint-param-title, .response-example-title, .response-example-title, .endpoint-object-title, .endpoint-attributes-title {
   font-size: 1.5em;
   display: block;
-  margin-top: 1.2em;
-
 }
 
-.endpoint-attribute-name, .endpoint-attribute-type  {
+.endpoint-attribute-name, .endpoint-attribute-type, .collection-object-name {
   padding: 0.3em;
   font-weight: 600;
   color:rgb(28, 28, 28);
-  display:inline;
+  display: inline;
 }
 
 .endpoint-attribute-type {
@@ -116,6 +119,18 @@ a {
 
 .endpoint-attribute-description {
   padding: 1em;
+}
+
+.endpoint-request-path-clipboard-wrapper {
+  display: flex;
+  justify-content:left;
+  align-items:center;
+}
+
+.introduction-text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2em;
+  color: rgb(18, 24, 43);
 }
 
 
@@ -128,11 +143,18 @@ a {
 }
 
 .endpoint-request-path {
-
+  margin-right: 0;
 }
 
 .response-example-title {
 
+}
+
+.endpoint-parameter-wrapper {
+  padding-bottom: 1em;
+}
+path:hover {
+  cursor: pointer;
 }
 
 .response-example-full-object {
