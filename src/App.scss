@@ -8,11 +8,11 @@ body {
   padding: 2em;
   top:0;
   left:0;
-  width: 20%;
+  width: 25%;
 }
 
 .main-content {
-  width:80%;
+  width: 75%;
   margin: 0;
   position: absolute;
   right: 0;
@@ -71,14 +71,20 @@ a {
   color: black;
 }
 
-.endpoint, .endpoint-param-name, .endpoint-request-path, .endpoint-param-name-intro {
+.endpoint, .endpoint-param-name, .endpoint-request-path, .endpoint-param-name-intro, .base-url {
   display: block;
   background-color: rgb(221, 221, 221);
-  width:fit-content;
+  width: fit-content;
   border-radius: 3px;
   padding: 1px;
   margin: 1em;
   font-family: 'Courier New', Courier, monospace;
+}
+.base-url {
+  font-size: 0.8em;
+  // font-weight: 500;
+  margin: 0;
+  margin-top: 0.5em;
 }
 
 .endpoint-param-name-intro {
@@ -86,7 +92,7 @@ a {
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
 }
-.endpoint-title, .endpoint-param-title, .response-example-title, .endpoint-object-title, .endpoint-attributes-title {
+.endpoint-title, .endpoint-param-title, .response-example-title, .endpoint-object-title, .endpoint-attributes-title, .base-url-title {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 2em;
   font-weight: 500;
@@ -103,6 +109,11 @@ a {
 .endpoint-param-title, .response-example-title, .response-example-title, .endpoint-object-title, .endpoint-attributes-title {
   font-size: 1.5em;
   display: block;
+}
+.base-url-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding-left: 0;
 }
 
 .endpoint-attribute-name, .endpoint-attribute-type, .collection-object-name {

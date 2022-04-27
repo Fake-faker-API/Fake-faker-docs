@@ -1,7 +1,8 @@
 const endpointDescription = {
   addresses: {
     endpoint: '/addresses',
-    title: 'GET Addresses',
+    title: 'Addresses',
+    method: 'GET',
     endpointDescription: 'Retrieves an address object, containing fake but realistic US address. Currently response returns an array of 10 objects by default.',
     objectName: 'Address',
     object: [{
@@ -73,7 +74,8 @@ const endpointDescription = {
   },
   books: {
     endpoint: '/books',
-    title: 'GET Books',
+    title: 'Books',
+    method: 'GET',
     endpointDescription: 'Retrieves a book object, containing information about a fake book. Currently response returns an array of 10 objects by default.',
     objectName: 'Book',
     object: [{
@@ -200,7 +202,8 @@ const endpointDescription = {
   },
   companies: {
     endpoint: '/companies',
-    title: 'GET Companies',
+    title: 'Companies',
+    method: 'GET',
     endpointDescription: 'Retrieves a company object, containing information about a fake US based company. Currently response returns an array of 10 objects by default.',
     objectName: 'Company',
     object: [{
@@ -290,7 +293,8 @@ const endpointDescription = {
   },
   movies: {
     endpoint: '/movies',
-    title: 'GET Movies',
+    title: 'Movies',
+    method: 'GET',
     endpointDescription: 'Retrieves a movie object, containing information about a fake movie. Currently response returns an array of 10 objects by default.',
     objectName: 'Movie',
     object: [{
@@ -421,7 +425,8 @@ const endpointDescription = {
   },
   products: {
     endpoint: '/products',
-    title: 'GET Products',
+    title: 'Products',
+    method: 'GET',
     endpointDescription: 'Retrieves a product object, containing information about a fake product. Currently response returns an array of 10 objects by default.',
     objectName: 'Product',
     object: [{
@@ -493,7 +498,8 @@ const endpointDescription = {
 
   users: {
     endpoint: '/users',
-    title: 'GET Users',
+    title: 'Users',
+    method: 'GET',
     endpointDescription: 'Retrieves a user object, containing information about a fake user.',
     objectName: 'User',
     object: [{

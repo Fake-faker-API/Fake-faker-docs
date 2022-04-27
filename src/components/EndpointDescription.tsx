@@ -31,6 +31,7 @@ interface Props {
   endpoint: string
   title: string
   endpointDescription: string
+  method: string
   objectName: string
   queryParameters?: QueryPrameters[]
   object: ReturnedObject[]
@@ -40,6 +41,7 @@ const EndpointDescription: FC<Props> = ({
   endpoint,
   title,
   endpointDescription,
+  method,
   objectName,
   queryParameters,
   object
@@ -48,9 +50,9 @@ const EndpointDescription: FC<Props> = ({
 
   return (
     <div>
-      <span className='endpoint-title'> {title} </span>
+      <span className='endpoint-title'>{title} </span>
       <hr className='divider-endpoint-title'></hr>
-      <span className='endpoint'> {endpoint} </span>
+      <span className='endpoint'>{method} {endpoint} </span>
       <span className='endpoint-description'> {endpointDescription} </span>
 
       <div> {queryParameters
