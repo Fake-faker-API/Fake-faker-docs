@@ -1,5 +1,6 @@
 import React, {
-  FC
+  FC,
+  useState
 } from 'react';
 import AddressObject from '../typeDefs/AddressObject';
 import BookObject from '../typeDefs/BookObject';
@@ -7,27 +8,29 @@ import CompanyObject from '../typeDefs/CompanyObject';
 import MovieObject from '../typeDefs/MovieObject';
 import ProductObject from '../typeDefs/ProductObject';
 import UserObject from '../typeDefs/UserObject';
-import { parseResponseObject } from '../utils/helper-utils'
+import { parseResponseObject } from '../utils/helper-utils';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export type ResponseObj = AddressObject[] | BookObject[] | CompanyObject[] | MovieObject[] | ProductObject[] | UserObject[]
 
 interface ReturnedObject {
-  name: String
-  type: String
-  description?: String
+  name: string
+  type: string
+  description?: string
 }
 
 interface QueryPrameters {
-  name: String
-  description: String
-  exampleRequestURL: String
+  name: string
+  description: string
+  exampleRequestURL: string
   exampleResponse: ResponseObj
-  notes: String
+  notes: string
 }
 interface Props {
-  endpoint: String
-  title: String
-  endpointDescription: String
+  endpoint: string
+  title: string
+  endpointDescription: string
   queryParameters?: QueryPrameters[]
   object: ReturnedObject[]
 }
@@ -39,6 +42,8 @@ const EndpointDescription: FC<Props> = ({
   queryParameters,
   object
 }) => {
+  const [clipboardState, setClipboardState] = useState({ copied: false });
+
   return (
     <div>
       <span className='endpoint-title'> {title} </span>
@@ -53,7 +58,7 @@ const EndpointDescription: FC<Props> = ({
           <span className='endpoint-attributes-title'>Attributes</span>
           {object.map((attribute, index) => {
             return (
-              <div key={`${attribute.name}_${index}`}>
+              <div key={`${attribute.name}_${index}`} className='endpoint-parameter-wrapper'>
               <span className='endpoint-attribute-name'>{attribute.name}</span>
               <span className='endpoint-attribute-type'>{attribute.type}</span>
               {attribute.description
@@ -79,9 +84,22 @@ const EndpointDescription: FC<Props> = ({
               <span className='endpoint-param-description'>
                 {param.description}
               </span>
+              <div className='endpoint-request-path-clipboard-wrapper'>
               <span className='endpoint-request-path'>
                 {param.exampleRequestURL}
               </span>
+                <CopyToClipboard text={param.exampleRequestURL}
+                  onCopy={() => setClipboardState({ copied: true })}>
+                    <AssignmentIcon />
+                </CopyToClipboard>
+                {clipboardState.copied
+                  ? <>
+                  <span className='clipboard-copied-msg'>Copied!</span>
+                  {/* //FIXME should display Copied! for some period of time and then clear */}
+                  {setClipboardState({ copied: false })}
+                  </>
+                  : ''}
+              </div>
               <span className='response-example-title'>Example Response </span>
                 <pre>
                   <p className='response-example-full-object'>

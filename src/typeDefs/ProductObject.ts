@@ -1,9 +1,9 @@
 export default interface ProductObject {
   id: Number
-  title: String
-  description: String
-  price: String
-  category: String
-  sku: String
+  title: string
+  description: string
+  price: string
+  category: string
+  sku: string
   stock_quantity: Number
 }

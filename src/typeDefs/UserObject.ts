@@ -1,8 +1,8 @@
 export default interface UserObject {
   id: Number
-  first_name: String
-  last_name: String
-  username: String
-  password: String
-  email: String
+  first_name: string
+  last_name: string
+  username: string
+  password: string
+  email: string
 }

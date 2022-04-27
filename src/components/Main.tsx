@@ -26,10 +26,10 @@ export default function Main () {
           </Route>
           <Route path='/users' element={(() => <EndpointDescription {...endpointDescription.users} />)()}>
           </Route>
-          <Route path='/introduction' element={(() => <Introduction introductionText='Some text' />)()}>
+          <Route path='/introduction' element={(() => <Introduction />)()}>
 
           </Route>
-          <Route path='/' element={(() => <Introduction introductionText='Some text' />)()}>
+          <Route path='/' element={(() => <Introduction />)()}>
 
           </Route>
         </Routes>
