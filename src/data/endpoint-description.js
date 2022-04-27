@@ -3,6 +3,7 @@ const endpointDescription = {
     endpoint: '/addresses',
     title: 'GET Addresses',
     endpointDescription: 'Retrieves an address object, containing fake but realistic US address. Currently response returns an array of 10 objects by default.',
+    objectName: 'Address',
     object: [{
       name: 'id',
       type: 'integer',
@@ -74,6 +75,7 @@ const endpointDescription = {
     endpoint: '/books',
     title: 'GET Books',
     endpointDescription: 'Retrieves a book object, containing information about a fake book. Currently response returns an array of 10 objects by default.',
+    objectName: 'Book',
     object: [{
       name: 'id',
       type: 'integer',
@@ -200,6 +202,7 @@ const endpointDescription = {
     endpoint: '/companies',
     title: 'GET Companies',
     endpointDescription: 'Retrieves a company object, containing information about a fake US based company. Currently response returns an array of 10 objects by default.',
+    objectName: 'Company',
     object: [{
       name: 'id',
       type: 'integer',
@@ -289,6 +292,7 @@ const endpointDescription = {
     endpoint: '/movies',
     title: 'GET Movies',
     endpointDescription: 'Retrieves a movie object, containing information about a fake movie. Currently response returns an array of 10 objects by default.',
+    objectName: 'Movie',
     object: [{
       name: 'id',
       type: 'integer',
@@ -419,6 +423,7 @@ const endpointDescription = {
     endpoint: '/products',
     title: 'GET Products',
     endpointDescription: 'Retrieves a product object, containing information about a fake product. Currently response returns an array of 10 objects by default.',
+    objectName: 'Product',
     object: [{
       name: 'id',
       type: 'integer',
@@ -490,6 +495,7 @@ const endpointDescription = {
     endpoint: '/users',
     title: 'GET Users',
     endpointDescription: 'Retrieves a user object, containing information about a fake user.',
+    objectName: 'User',
     object: [{
       name: 'id',
       type: 'integer',
