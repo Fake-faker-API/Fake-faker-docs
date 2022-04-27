@@ -2,7 +2,9 @@ const endpointDescription = {
   addresses: {
     endpoint: '/addresses',
     title: 'Addresses',
+    method: 'GET',
     endpointDescription: 'Retrieves an address object, containing fake but realistic US address. Currently response returns an array of 10 objects by default.',
+    objectName: 'Address',
     object: [{
       name: 'id',
       type: 'integer',
@@ -73,7 +75,9 @@ const endpointDescription = {
   books: {
     endpoint: '/books',
     title: 'Books',
+    method: 'GET',
     endpointDescription: 'Retrieves a book object, containing information about a fake book. Currently response returns an array of 10 objects by default.',
+    objectName: 'Book',
     object: [{
       name: 'id',
       type: 'integer',
@@ -199,7 +203,9 @@ const endpointDescription = {
   companies: {
     endpoint: '/companies',
     title: 'Companies',
+    method: 'GET',
     endpointDescription: 'Retrieves a company object, containing information about a fake US based company. Currently response returns an array of 10 objects by default.',
+    objectName: 'Company',
     object: [{
       name: 'id',
       type: 'integer',
@@ -288,7 +294,9 @@ const endpointDescription = {
   movies: {
     endpoint: '/movies',
     title: 'Movies',
+    method: 'GET',
     endpointDescription: 'Retrieves a movie object, containing information about a fake movie. Currently response returns an array of 10 objects by default.',
+    objectName: 'Movie',
     object: [{
       name: 'id',
       type: 'integer',
@@ -418,7 +426,9 @@ const endpointDescription = {
   products: {
     endpoint: '/products',
     title: 'Products',
+    method: 'GET',
     endpointDescription: 'Retrieves a product object, containing information about a fake product. Currently response returns an array of 10 objects by default.',
+    objectName: 'Product',
     object: [{
       name: 'id',
       type: 'integer',
@@ -489,7 +499,9 @@ const endpointDescription = {
   users: {
     endpoint: '/users',
     title: 'Users',
+    method: 'GET',
     endpointDescription: 'Retrieves a user object, containing information about a fake user.',
+    objectName: 'User',
     object: [{
       name: 'id',
       type: 'integer',
