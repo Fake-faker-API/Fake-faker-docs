@@ -14,5 +14,4 @@
   This collection of open-source APIs lets developers produce fake but realistic data that they can use for their projects.
   
   
-  
 ![faker-docs](https://user-images.githubusercontent.com/41551585/165635702-df824f33-8296-49e7-81d0-5fad9e358bef.gif)
