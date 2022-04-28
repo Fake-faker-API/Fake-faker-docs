@@ -70,6 +70,41 @@ const endpointDescription = {
       }
       ],
       notes: 'Specified number can be between 1 and 1000'
+    },
+    {
+      name: 'state',
+      description: 'Filter objects by state',
+      exampleRequestURL: 'https://fakefakerapi.herokuapp.com/api/v1/addresses?total_rows=3&state=IL',
+      exampleResponse: [
+        {
+          id: 94,
+          street_number: '6125',
+          street_name: 'Ridge Road',
+          city: 'Glendale',
+          state: 'IL',
+          zipcode: '13754',
+          country: 'US'
+        },
+        {
+          id: 141,
+          street_number: '2260',
+          street_name: 'Bridge Street',
+          city: 'Lewiston',
+          state: 'IL',
+          zipcode: '97523',
+          country: 'US'
+        },
+        {
+          id: 167,
+          street_number: '554',
+          street_name: 'Hillcrest Drive',
+          city: 'Silverton',
+          state: 'IL',
+          zipcode: '72704',
+          country: 'US'
+        }
+      ],
+      notes: 'Any US state is a valid option'
     }]
   },
   books: {
@@ -96,7 +131,7 @@ const endpointDescription = {
     {
       name: 'genre',
       type: 'string',
-      description: "One of: Action/adventure, Art/architecture, Alternate history, Autobiography, Anthology, Biography, \
+      description: "Filter by genre. List of possible options: Action/adventure, Art/architecture, Alternate history, Autobiography, Anthology, Biography, \
       Chick lit, Business/economics, Children's, Crafts/hobbies, Classic, Cookbook, Comic book, Diary, \
       Coming-of-age, Dictionary, Crime, Encyclopedia, Drama, Guide, Fairytale, Health/fitness, Fantasy, History,\
       Graphic novel, Home and garden, Historical fiction, Humor, Horror, Journal, Mystery, Math, Paranormal romance, \
@@ -161,7 +196,7 @@ const endpointDescription = {
       notes: 'Specified number can be between 1 and 1000'
     }, {
       name: 'genre',
-      description: "Return rows for a specific genre or a number of genres. List of possible options: Action/adventure, Art/architecture, Alternate history, Autobiography, Anthology, Biography, \
+      description: "Filter by genre. List of possible options: Action/adventure, Art/architecture, Alternate history, Autobiography, Anthology, Biography, \
       Chick lit, Business/economics, Children's, Crafts/hobbies, Classic, Cookbook, Comic book, Diary, \
       Coming-of-age, Dictionary, Crime, Encyclopedia, Drama, Guide, Fairytale, Health/fitness, Fantasy, History,\
       Graphic novel, Home and garden, Historical fiction, Humor, Horror, Journal, Mystery, Math, Paranormal romance, \
