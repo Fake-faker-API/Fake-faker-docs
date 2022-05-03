@@ -8,6 +8,7 @@ import MovieObject from '../typeDefs/MovieObject';
 import ProductObject from '../typeDefs/ProductObject';
 import UserObject from '../typeDefs/UserObject';
 import Parameter from './Parameter';
+import Attribute from './Attribute';
 
 export type ResponseObj = AddressObject[] | BookObject[] | CompanyObject[] | MovieObject[] | ProductObject[] | UserObject[]
 
@@ -57,20 +58,10 @@ const EndpointDescription: FC<Props> = ({
           <span className='endpoint-attributes-title'>Attributes</span>
           {object.map((attribute, index) => {
             return (
-              <div key={`${attribute.name}_${index}`} className='endpoint-parameter-wrapper'>
-              <span className='endpoint-attribute-name'>{attribute.name}</span>
-              <span className='endpoint-attribute-type'>{attribute.type}</span>
-              {attribute.description
-                ? <>
-                <span className='endpoint-attribute-description'>{attribute.description} </span>
-              </>
-                : <>
-                <br/>
-                </>}
-              </div>
+              <Attribute key={`${attribute.name}_${index}`} {...attribute} />
             )
           })}
-
+{/* key={`${name}_${index}`}  */}
         <span className='endpoint-param-title'>Parameters</span>
         <hr className='divider-endpoint-subtitle'></hr>
 
