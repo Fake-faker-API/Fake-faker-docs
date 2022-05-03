@@ -1,6 +1,5 @@
 import React, {
-  FC,
-  useState
+  FC
 } from 'react';
 import AddressObject from '../typeDefs/AddressObject';
 import BookObject from '../typeDefs/BookObject';
@@ -8,9 +7,7 @@ import CompanyObject from '../typeDefs/CompanyObject';
 import MovieObject from '../typeDefs/MovieObject';
 import ProductObject from '../typeDefs/ProductObject';
 import UserObject from '../typeDefs/UserObject';
-import { parseResponseObject } from '../utils/helper-utils';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import Parameter from './Parameter';
 
 export type ResponseObj = AddressObject[] | BookObject[] | CompanyObject[] | MovieObject[] | ProductObject[] | UserObject[]
 
@@ -46,8 +43,6 @@ const EndpointDescription: FC<Props> = ({
   queryParameters,
   object
 }) => {
-  const [clipboardState, setClipboardState] = useState({ copied: false });
-
   return (
     <div>
       <span className='endpoint-title'>{title} </span>
@@ -81,39 +76,9 @@ const EndpointDescription: FC<Props> = ({
 
         {queryParameters.map((param, index) => {
           return (
-            <div key={`${param.name}_${index}`}>
-              <span className='endpoint-param-name'>
-                {param.name}
-              </span>
-              <span className='endpoint-param-description'>
-                {param.description}
-              </span>
-              <div className='endpoint-request-path-clipboard-wrapper'>
-              <span className='endpoint-request-path'>
-                {param.exampleRequestURL}
-              </span>
-                <CopyToClipboard text={param.exampleRequestURL}
-                  onCopy={() => setClipboardState({ copied: true })}>
-                    <AssignmentIcon />
-                </CopyToClipboard>
-                {clipboardState.copied
-                  ? <>
-                  <span className='clipboard-copied-msg'>Copied!</span>
-                  {/* //FIXME should display Copied! for some period of time and then clear */}
-                  {setClipboardState({ copied: false })}
-                  </>
-                  : ''}
-              </div>
-              <span className='response-example-title'>Example Response </span>
-                <pre>
-                  <p className='response-example-full-object'>
-                    {parseResponseObject(param.exampleResponse)}
-                  </p>
-                </pre>
-            </div>
+            <Parameter {...param} key={`${index}_${param.name}`} />
           )
         })}
-
         </>
         : ''}
         </div>
