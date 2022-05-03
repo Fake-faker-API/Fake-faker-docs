@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import { parseResponseObject } from '../utils/helper-utils';
+import parseResponseObject from '../utils/parseResponseObject';
 import { ResponseObj } from './EndpointDescription';
 
 interface ParameterProps {
