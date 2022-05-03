@@ -61,7 +61,6 @@ const EndpointDescription: FC<Props> = ({
               <Attribute key={`${attribute.name}_${index}`} {...attribute} />
             )
           })}
-{/* key={`${name}_${index}`}  */}
         <span className='endpoint-param-title'>Parameters</span>
         <hr className='divider-endpoint-subtitle'></hr>
 
