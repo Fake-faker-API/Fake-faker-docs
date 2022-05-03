@@ -4,6 +4,8 @@ import React, {
 } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import Tooltip from '@mui/material/Tooltip';
+import Button from '@mui/material/Button';
 import parseResponseObject from '../utils/parseResponseObject';
 import { ResponseObj } from './EndpointDescription';
 
@@ -21,6 +23,10 @@ const Parameter:FC<ParameterProps> = ({
 }) => {
   const [clipboardState, setClipboardState] = useState({ copied: false });
 
+  const handleClick = () => {
+    setClipboardState({ copied: true });
+  };
+
   return (
     <div>
     <span className='endpoint-param-name'>
@@ -33,14 +39,17 @@ const Parameter:FC<ParameterProps> = ({
     <span className='endpoint-request-path'>
       {exampleRequestURL}
     </span>
+    <Button onClick={handleClick}>
       <CopyToClipboard text={exampleRequestURL}
         onCopy={() => setClipboardState({ copied: true })}>
-          <AssignmentIcon />
+          <Tooltip title="Copy to clipboard">
+            <AssignmentIcon />
+          </Tooltip>
       </CopyToClipboard>
+      </Button>
       {clipboardState.copied
         ? <>
         <span className='clipboard-copied-msg'>Copied!</span>
-        {/* //FIXME should display Copied! for some period of time and then clear */}
         {setClipboardState({ copied: false })}
         </>
         : ''}
@@ -52,7 +61,6 @@ const Parameter:FC<ParameterProps> = ({
         </p>
       </pre>
   </div>
-
   );
 }
 
