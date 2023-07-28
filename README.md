@@ -10,7 +10,7 @@
 
 
 ## Documentation for [Faker faker REST API](https://github.com/Fake-faker-API/Fake-faker-REST-API)
-### Deployed app can be found [here](https://fakefaker-docs.herokuapp.com/)
+
   This collection of open-source APIs lets developers produce fake but realistic data that they can use for their projects.
   
   
